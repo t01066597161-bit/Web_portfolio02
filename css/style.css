@@ -1,0 +1,149 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*공통*/
+*{ margin: 0 auto; padding: 0; font-family: 'Pretendard', 'Nanum Gothic',  '맑은 고딕', sans-serif; box-sizing: border-box; margin: 0; padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+body{font-family: 'Noto Sans KR', 'Nanum Gothic', '맑은 고딕', sans-serif;overflow-x: hidden}
+
+a, a:active, a:focus, a:hover, a:visited{text-decoration: none; color: #fff}
+.big-inner_box{width: 100%; max-width: 1280px; margin: 0 auto;}
+.inner_box{width: 100%; max-width: 1280px; margin: 0 auto;}
+.clear{clear: both;}
+
+.header{
+    margin: 0 auto;
+    width: 100%;
+
+}
+.header img{
+    width: 100%;
+
+}
+.popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0);
+      display: none; /* 기본은 숨김 */
+      justify-content: center;
+      align-items: center;
+      transform: translate();
+    }
+
+    /* 팝업 박스 */
+    .popup-box {
+        transform: translate(-550px, 400px);
+      background: #ffffff85;
+      padding: 20px 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .popup-box h2 {
+      margin-bottom: 15px;
+    }
+
+    .close-btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 8px 15px;
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    /* 우측 하단 연락처 링크 */
+    .contact-link {
+      position: absolute;
+      bottom: 20px;
+      left: 180px;
+      color: #fff;
+      padding: 10px 15px;
+
+      text-decoration: none;
+    }
+    .contact-link img{
+        width: 30px;
+    }
+/* 햄버거 버튼 */
+.hamburger {
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: 7px 0;
+  background: #b0c4ff; /* 파란빛 느낌 */
+  transition: 0.4s;
+}
+
+/* 슬라이드 메뉴 */
+.side-menu {
+  position: fixed;
+  top: 10%;
+  right: -280px; /* 처음엔 숨김 */
+  width: 300px;
+  background: #92aaff00; /* 이미지에 있는 부드러운 파란색 */
+
+  transition: 0.4s;
+  z-index: 999;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  margin-right: 100px;
+}
+
+.side-menu ul li {
+  font-size: 24px;
+  padding: 40px 0;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  line-height: 5px;
+}
+
+
+
+.side-menu ul li:hover {
+  opacity: 0.8;
+}
+
+
+/* 메뉴 열릴 때 위치 */
+.side-menu.open {
+  right: 0;
+}
+
+/* 햄버거 애니메이션 */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.intro{width: ;}
+
+/*pc화면만 더 크게*/
+@media (min-width: 1200px) {
+    .side-menu {top: 20%;}
+    .side-menu ul li {  font-size: 32px;}
+}
