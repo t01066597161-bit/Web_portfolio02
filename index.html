@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfoilo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- 슬라이드 메뉴 -->
+    <div class="side-menu" id="sideMenu">
+      <ul>
+        <li>소개</li>
+        <li>경력</li>
+        <li>포트폴리오</li>
+        <li>비전</li>
+        <li>역량</li>
+      </ul>
+    </div>
+
+    <div class="header">
+      <div class="banner">
+        <img src="img/portfolio_main_banner.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- 연락처 링크 -->
+  <a href="#" class="contact-link" onclick="openPopup()"><img src="img/Phone.png" alt=""></a>
+
+  <!-- 팝업 화면 -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <p> 010.8188.5781</p>
+      <p>hakjang6343@naver.com</p>
+      <a href="#" class="close-btn" onclick="closePopup()">닫기</a>
+    </div>
+  </div>
+
+   <section id="intro" class="container"onclick="openAboutModal()">
+            <!-- About Me -->
+        <div class="intro"><span class="section-title">소개</span></div>
+
+</body>
+
+
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("sideMenu");
+  const ham = document.querySelector(".hamburger");
+
+  menu.classList.toggle("open");
+  ham.classList.toggle("active");
+}
+
+ function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</html>
