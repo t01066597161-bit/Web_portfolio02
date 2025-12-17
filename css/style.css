@@ -367,6 +367,7 @@
 }
 
 .about-modal-image {
+  width: 120px;
   text-align: center;
   margin-bottom: 20px;
 }
