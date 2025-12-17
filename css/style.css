@@ -1108,7 +1108,10 @@
   .skill-card{
     margin-bottom: 100px;
   }
-  
+  .introduce-text{
+    text-align: center;
+    transform: translate(-20px,20px);
+  }
 }
 
 /* 모바일 */

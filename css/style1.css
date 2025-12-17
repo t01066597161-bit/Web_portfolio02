@@ -575,262 +575,666 @@ body {
             .detail-image-row {
                 flex-direction: column;
             }
-        }
-
-        /* 반응형 - 태블릿 */
-        @media (max-width: 1440px) {
-            body {
-                min-width: auto;
-            }
-
-            .container {
-                padding: 0 60px;
-            }
-
-            .project-title {
-                font-size: 28px;
+            .header{
+                height: 330px;
             }
         }
 
-        /* 반응형 - 작은 화면 */
-        @media (max-width: 1024px) {
-            .project-card {
-               grid-template-columns: 1fr !important;
-                grid-template-areas: "image" "info" !important;
-            }
+        /* 태블릿 (1440px 이하) */
+@media (max-width: 1440px) {
+    body {
+        min-width: auto;
+    }
 
-            .project-card .project-info {
-                text-align: center;
-                padding: 0 10px !important;
-            }
+    .container {
+        padding: 0 60px;
+    }
 
-            .project-tags {
-                justify-content: center;
-            }
+    .header {
+        padding: 40px 0;
+    }
 
-            .project-title {
-                font-size: 26px;
-            }
-        }
+    .top-bar {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
 
-        /* 반응형 - 모바일 */
-  @media (max-width: 768px) {
-  /* 네비 박스를 페이지 중앙에 배치 */
-  .nav {
-    position: relative;
-    width: 100%;
-    max-width: 700px;         /* 빨간 박스 폭 제한 (원하면 값 조정) */
-    margin: 20px auto 0;      /* 중앙 정렬 */
-    background: #fff;
-   padding: 6px 10px;         /* 내부 패딩 줄이기 */
-    display: flex;
-    flex-wrap: wrap;          /* 줄 바꿈 허용 */
-    justify-content: center;  /* 항목들을 중앙으로 */
-    gap: 30px;
-    line-height: 10px;
-    overflow: visible;        /* 스크롤 대신 줄바꿈을 선택 */
-  }
+    .nav {
+        gap: 40px;
+        margin-left: 200px;
+    }
 
-  /* 데스크톱에서 주었던 좌측 여백 제거 */
-  .nav {
-    margin-left: 0;
-  }
+    .nav-text {
+        font-size: 18px;
+    }
 
-  .nav-item {
-    flex: 0 0 auto;
-    text-align: center;
-    padding: 0;
-  }
+    .section-header {
+        font-size: 28px;
+        margin-bottom: 60px;
+    }
 
-  .nav-text {
-    font-size: 20px;
-    font-weight: 600;
-    color: #89a7ff;
-    white-space: nowrap;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-  .nav-underline {
-    display: none;
-  }
+    .project-title {
+        font-size: 28px;
+    }
 
-  /* 본문이 메뉴 아래로 자연스럽게 떨어지도록 */
-  main {
-    margin-top: 30px;
-  }
-}
-        
-        
-#visual .project-card:nth-child(odd) .project-image {
-    grid-area: image;
-}
-#visual .project-card:nth-child(odd) .project-info {
-    grid-area: info;
-    text-align: left;
-    padding-left: 40px;
+    .project-description {
+        font-size: 16px;
+    }
+
+    .project-card {
+        gap: 60px;
+    }
 }
 
-#visual .project-card:nth-child(even) {
-    grid-template-areas: "info image";
-}
-#visual .project-card:nth-child(even) .project-image {
-    grid-area: image;
-}
-#visual .project-card:nth-child(even) .project-info {
-    grid-area: info;
-    text-align: left;
-    padding-right: 40px;
-}
-/* 시각정보디자인 첫 번째 카드 좌우 반전 */
-#visual .project-card.reverse {
-    grid-template-areas: "image info"; /* 이미지 왼쪽, 텍스트 오른쪽 */
+
+/* 중형 태블릿 (1024px 이하) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .header {
+        padding: 30px 0;
+        height: auto;
+    }
+
+    .top-bar {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .nav {
+        gap: 30px;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .nav-text {
+        font-size: 16px;
+    }
+
+    /* 프로젝트 카드 - 세로 배치 */
+    .project-card {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: "image" "info" !important;
+        gap: 40px;
+    }
+
+    .project-card .project-info {
+        text-align: center;
+        padding: 0 20px !important;
+    }
+
+    .project-card .project-image {
+        max-width: 100%;
+    }
+
+    /* 태그 중앙 정렬 */
+    .project-tags,
+    .project-tag,
+    .project-tag1,
+    .project-tag2,
+    .project-tag3 {
+        justify-content: center;
+        margin-left: 0 !important;
+    }
+
+    .project-title {
+        font-size: 26px;
+    }
+
+    .section-header {
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+
+    /* 모달 */
+    .modal-content {
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .modal-intro-section {
+        padding: 60px 40px;
+    }
+
+    .modal-detail-section {
+        padding: 40px 30px;
+    }
+
+    .modal-detail-title {
+        font-size: 28px;
+        width: 70%;
+    }
+
+    .detail-image-row {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
-#visual .project-card.reverse .project-image {
-    grid-area: image;
-}
 
-#visual .project-card.reverse .project-info {
-    grid-area: info;
-    text-align: left;
-    padding-left: 40px;
-}
-
-#illustration .project-card:nth-child(odd) {
-    grid-template-areas: "image info"; /* 이미지 왼쪽, 텍스트 오른쪽 */
-}
-#illustration .project-card:nth-child(odd) .project-image {
-    grid-area: image;
-}
-#illustration .project-card:nth-child(odd) .project-info {
-    grid-area: info;
-    text-align: left;
-    padding-left: 40px;
-}
-
-#illustration .project-card:nth-child(even) {
-    grid-template-areas: "info image"; /* 텍스트 왼쪽, 이미지 오른쪽 */
-}
-#illustration .project-card:nth-child(even) .project-image {
-    grid-area: image;
-}
-#illustration .project-card:nth-child(even) .project-info {
-    grid-area: info;
-    text-align: left;
-    padding-right: 40px;
-}
-/* 햄버거 메뉴 패널 */
-.hamburger-menu {
-  position: fixed;
-  top: 0;
-  right: -320px; /* 기본은 화면 밖 */
-  width: 320px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 12px rgba(0,0,0,0.15);
-  transition: right 0.3s ease;
-  z-index: 1001; /* 헤더(100)보다 큼 */
-  padding: 100px 30px 30px;
-}
-
-/* 열림 상태 */
-.hamburger-menu.active {
-  right: 0;
-}
-
-/* 오버레이 */
-.hamburger-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.hamburger-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* 리스트 스타일 */
-.hamburger-menu-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.hamburger-menu-list li { margin-bottom: 24px; }
-
-.hamburger-menu-list a {
-  font-size: 20px;
-  color: #333;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 6px;
-  display: inline-block;
-}
-
-/* 빨간 밑줄 효과 */
-.hamburger-menu-list a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: 0;
-  width: 100%; height: 2px;
-  background: #e43131;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.hamburger-menu-list a:hover::after {
-  transform: scaleX(1);
-}
-
-/* 햄버거 아이콘 active 애니메이션(선택) */
-.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.hamburger.active span:nth-child(2) { opacity: 0; }
-.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-.hamburger span { transition: transform 0.3s ease, opacity 0.3s ease; }
-
-/* 모달 이미지 기본 반응형 */
-.modal-cover-image img,
-.detail-image-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 모바일 전용 크기 조정 */
+/* 모바일 (768px 이하) */
 @media (max-width: 768px) {
-  .modal-content {
-    padding: 20px; /* 내부 여백 줄이기 */
-  }
+    .container {
+        padding: 0 20px;
+    }
 
-  .modal-cover-image {
-    width: 100%;   /* 화면 폭에 맞추기 */
-    margin: 20px auto;
-  }
+    .header {
+        padding: 20px 0;
+        height: auto;
+    }
 
-  .modal-cover-image img {
-    width: 100%;   /* 모바일에서는 꽉 차게 */
-    height: auto;
-    border-radius: 10px;
-  }
+    .top-bar {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
 
-  .detail-image-row {
-    flex-direction: column; /* 세로 배치 */
-    gap: 20px;
-  }
+    .top-bar a {
+        font-size: 28px;
+    }
 
-  .detail-image-item {
-    width: 100%;   /* 모바일에서는 전체 폭 사용 */
-  }
+    /* 네비게이션 - 2줄 배치 */
+    .nav {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto 0;
+        padding: 10px;
+        gap: 15px 20px;
+        justify-content: center;
+        line-height: normal;
+    }
 
-  .detail-image-item img {
-    width: 100%;
-    height: auto;
-  }
+    .nav-item {
+        flex: 0 0 auto;
+        padding: 5px 0;
+    }
+
+    .nav-text {
+        font-size: 15px;
+        font-weight: 600;
+        color: #89a7ff;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-item.active .nav-text {
+        border-bottom-color: #5a7ec7;
+    }
+
+    .nav-underline {
+        display: none;
+    }
+
+    /* 메인 컨텐츠 */
+    main {
+        margin-top: 20px;
+    }
+
+    .portfolio-section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        font-size: 24px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .project-list {
+        gap: 60px;
+    }
+
+    .project-card {
+        gap: 30px;
+    }
+
+    .project-category {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .project-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .project-tags,
+    .project-tag,
+    .project-tag1,
+    .project-tag2,
+    .project-tag3 {
+        gap: 10px;
+        margin-left: 0 !important;
+    }
+
+    .tag {
+        font-size: 14px;
+    }
+
+    .project-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .project-image {
+        border-radius: 15px;
+    }
+
+    /* 모달 */
+    .modal-content {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        font-size: 32px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .modal-intro-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    .modal-intro-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .modal-cover-image {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .modal-cover-image img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .modal-detail-section {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .modal-detail-section p {
+        font-size: 20px;
+    }
+
+    .modal-detail-header {
+        margin-bottom: 30px;
+    }
+
+    .modal-detail-title {
+        font-size: 22px;
+        width: 80%;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .modal-detail-content {
+        gap: 30px;
+    }
+
+    .modal-detail-content p {
+        font-size: 18px;
+    }
+
+    .detail-image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .detail-image-item {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .detail-image-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .download-link {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    /* 햄버거 메뉴 */
+    .hamburger-menu {
+        width: 280px;
+        right: -280px;
+        padding: 80px 20px 20px;
+    }
+
+    .hamburger-menu-list a {
+        font-size: 18px;
+    }
+
+    /* 푸터 */
+    footer {
+        padding: 30px 0;
+    }
+
+    .footer-home {
+        font-size: 16px;
+    }
+}
+
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header {
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .top-bar {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .top-bar a {
+        font-size: 28px;
+    }
+
+    /* 네비게이션 - 2줄 배치 */
+    .nav {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto 0;
+        padding: 10px;
+        gap: 15px 20px;
+        justify-content: center;
+        line-height: normal;
+    }
+
+    .nav-item {
+        flex: 0 0 auto;
+        padding: 5px 0;
+    }
+
+    .nav-text {
+        font-size: 15px;
+        font-weight: 600;
+        color: #89a7ff;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav-item.active .nav-text {
+        border-bottom-color: #5a7ec7;
+    }
+
+    .nav-underline {
+        display: none;
+    }
+
+    /* 메인 컨텐츠 */
+    main {
+        margin-top: 20px;
+    }
+
+    .portfolio-section {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        font-size: 24px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .project-list {
+        gap: 60px;
+    }
+
+    .project-card {
+        gap: 30px;
+    }
+
+    .project-category {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .project-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .project-tags,
+    .project-tag,
+    .project-tag1,
+    .project-tag2,
+    .project-tag3 {
+        gap: 10px;
+        margin-left: 0 !important;
+    }
+
+    .tag {
+        font-size: 14px;
+    }
+
+    .project-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .project-image {
+        border-radius: 15px;
+    }
+
+    /* 모달 */
+    .modal-content {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .modal-close {
+        top: 15px;
+        right: 15px;
+        font-size: 32px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .modal-intro-section {
+        padding: 40px 20px;
+        margin-bottom: 30px;
+    }
+
+    .modal-intro-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .modal-cover-image {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .modal-cover-image img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .modal-detail-section {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    .modal-detail-section p {
+        font-size: 20px;
+    }
+
+    .modal-detail-header {
+        margin-bottom: 30px;
+    }
+
+    .modal-detail-title {
+        font-size: 22px;
+        width: 80%;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .modal-detail-content {
+        gap: 30px;
+    }
+
+    .modal-detail-content p {
+        font-size: 18px;
+    }
+
+    .detail-image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .detail-image-item {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .detail-image-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .download-link {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    /* 햄버거 메뉴 */
+    .hamburger-menu {
+        width: 280px;
+        right: -280px;
+        padding: 80px 20px 20px;
+    }
+
+    .hamburger-menu-list a {
+        font-size: 18px;
+    }
+
+    /* 푸터 */
+    footer {
+        padding: 30px 0;
+    }
+
+    .footer-home {
+        font-size: 16px;
+    }
+}
+
+/* 소형 모바일 (480px 이하) */
+@media (max-width: 480px) {
+    .top-bar {
+        font-size: 24px;
+    }
+
+    .top-bar a {
+        font-size: 24px;
+    }
+
+    .nav {
+        gap: 12px 15px;
+        padding: 8px;
+    }
+
+    .nav-text {
+        font-size: 13px;
+    }
+
+    .section-header {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .tag {
+        font-size: 13px;
+    }
+
+    .modal-intro-title {
+        font-size: 20px;
+    }
+
+    .modal-detail-title {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .modal-detail-section p {
+        font-size: 18px;
+    }
+
+    .modal-detail-content p {
+        font-size: 16px;
+    }
+
+    .hamburger-menu {
+        width: 260px;
+        right: -260px;
+    }
+}
+
+/* 시각정보디자인 섹션 */
+@media (min-width: 1025px) {
+    #visual .project-card:nth-child(odd) {
+        grid-template-areas: "image info";
+    }
+    
+    #visual .project-card:nth-child(odd) .project-info {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+    
+    #visual .project-card:nth-child(even) {
+        grid-template-areas: "info image";
+    }
+    
+    #visual .project-card:nth-child(even) .project-info {
+        padding-right: 40px;
+        padding-left: 0;
+    }
+}
+
+/* 일러스트레이션 섹션 */
+@media (min-width: 1025px) {
+    #illustration .project-card:nth-child(odd) {
+        grid-template-areas: "image info";
+    }
+    
+    #illustration .project-card:nth-child(odd) .project-info {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+    
+    #illustration .project-card:nth-child(even) {
+        grid-template-areas: "info image";
+    }
+    
+    #illustration .project-card:nth-child(even) .project-info {
+        padding-right: 40px;
+        padding-left: 0;
+    }
 }
 /* 서브페이지 끝 */
