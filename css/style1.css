@@ -1,0 +1,836 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/*공통*/
+*{ padding: 0; font-family: 'Pretendard', 'Nanum Gothic',  '맑은 고딕', sans-serif; box-sizing: border-box; margin: 0; padding: 0; box-sizing: border-box;}
+ul{list-style: none;}
+body{font-family: 'Noto Sans KR', 'Nanum Gothic', '맑은 고딕', sans-serif;overflow-x: hidden}
+
+a, a:active, a:focus, a:hover, a:visited{text-decoration: none; color: #fff}
+.big-inner_box{width: 1280px; margin: 0 auto;}
+.inner_box{width: 1480px; margin: 0 auto;}
+.clear{clear: both;}
+
+/* 서브페이지 시작 */
+* {margin: 0;  padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Malgun Gothic', sans-serif;
+    background-color: #fff;
+    min-width: auto; /* 모바일에서 강제 최소폭 제거 */
+
+    }
+
+
+    
+.header {
+    background-color: #fff;
+    padding: 60px 0;
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 120px;
+}
+
+.top-bar {
+    font-size: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.top-bar a {
+    color: #000;
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: 700;
+    color: #8FA8E8;
+    letter-spacing: -0.5px;}
+
+.hamburger {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+.hamburger span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: #000;
+            border-radius: 2px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hamburger:hover span {
+            background-color: #6b8bd4;
+        }
+
+.nav {
+            display: flex;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-left: 450px;
+        }
+
+.nav-item {
+            position: relative;
+            text-decoration: none;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+
+.nav-text {
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000;
+            transition: all 0.3s ease;
+            letter-spacing: -0.3px;
+        }
+
+.nav-underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+            transition: all 0.3s ease;
+        }
+
+.nav-item:hover .nav-text {
+            color: #6b8bd4;
+            transform: translateY(-2px);
+        }
+
+.nav-item:hover .nav-underline {
+            background-color: #6b8bd4;
+            height: 3px;
+        }
+
+.nav-item.active .nav-text {
+            color: #5a7ec7;
+            font-weight: 600;
+        }
+
+.nav-item.active .nav-underline {
+            height: 3px;
+            background-color: #5a7ec7;
+        }
+
+/* 포트폴리오 섹션 스타일 */
+.portfolio-section {
+            padding: 100px 0;
+        }
+
+.section-header {
+            font-size: 32px;
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 80px;
+            letter-spacing: -0.5px;
+        }
+
+/* 프로젝트 카드 스타일 - 지그재그 */
+.project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+        }
+
+.project-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+/* 홀수 카드 - 왼쪽에 텍스트, 오른쪽에 이미지 */
+.project-card:nth-child(odd) {
+            grid-template-areas: "info image";
+        }
+
+.project-card:nth-child(odd) .project-info {
+            grid-area: info;
+            text-align: left;
+            padding-right: 40px;
+        }
+
+.project-card:nth-child(odd) .project-image {
+            grid-area: image;
+        }
+
+/* 짝수 카드 - 왼쪽에 이미지, 오른쪽에 텍스트 */
+.project-card:nth-child(even) {
+            grid-template-areas: "image info";
+        }
+
+.project-card:nth-child(even) .project-info {
+            grid-area: info;
+            text-align: left;
+            padding-left: 40px;
+        }
+
+.project-card:nth-child(even) .project-image {
+            grid-area: image;
+        }
+
+.project-card .project-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+.project-card .project-info {
+            padding: 20px 0;
+        }
+
+.project-info {
+            padding: 20px 0;
+        }
+
+.project-category {
+            font-size: 16px;
+            color: #999;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+
+.project-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            line-height: 1.4;
+            word-break: keep-all;
+            text-align: center;
+        }
+
+.project-tags {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-left: 300px;
+            
+        }
+
+.project-tag {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-left: 230px;
+            
+        }
+.project-tag1 {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-left: 240px;
+            
+        }
+.project-tag2 {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-left: 280px;
+            
+        }
+.project-tag3 {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-left: 260px;
+            
+        }
+
+.tag {
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+
+.project-description {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.8;
+            white-space: pre-line;
+            word-break: keep-all;
+            text-align: center;
+        }
+
+.project-image {
+             width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+.project-image img {
+            width: 100%;
+            height: auto;
+        }
+
+/* 세로 이미지용 */
+.project-image.tall img {
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+/* 가로 이미지용 */
+.project-image.wide img {
+            aspect-ratio: 297mm, 210mm;
+            object-fit: cover;
+        }
+
+/* 정사각형 이미지용 */
+.project-image.square img {
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+/* 매우 긴 세로 이미지용 (책, 포스터 등) */
+.project-image.extra-tall img {
+            aspect-ratio: auto;
+            max-height: 1200px;
+            object-fit: contain;
+        }
+
+/* 클릭 가능한 프로젝트 카드 */
+.project-card.clickable {
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+.project-card.clickable:hover {
+            transform: translateY(-5px);
+        }
+
+.project-card.clickable:hover .project-image {
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+/* 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            max-width: 1400px;
+            margin: 80px auto;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* 모달 첫 페이지 레이아웃 */
+        .modal-intro-section {
+            background: white;
+            border-radius: 20px;
+            padding: 80px 60px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .modal-intro-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+        }
+
+        .modal-cover-image {
+            margin: 60px auto;
+            width: 700px;
+        }
+
+        .modal-cover-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .modal-close {
+            position: fixed;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+            background: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+            display: none; /* 기존 헤더 숨김 */
+        }
+
+        .modal-header h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .modal-header .category {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .modal-header .tags {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .modal-header .tag {
+            font-size: 16px;
+            color: #8FA8E8;
+        }
+
+        .modal-header .description {
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .modal-image {
+            text-align: center;
+            margin-bottom: 40px;
+            display: none; /* 기존 이미지 영역 숨김 */
+        }
+
+        .modal-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(255,255,255,0.1);
+        }
+
+        /* 모달 내부 상세 정보 섹션 */
+        .modal-detail-section {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            margin-top: 60px;
+        }
+
+        .modal-detail-section p{font-size: 32px; font-weight: 400;}
+
+        .modal-detail-header {
+            text-align: center;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .modal-detail-title {
+            width: 50%;
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+        }
+
+        .modal-detail-subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* 다운로드 링크 버튼 */
+        .download-link-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .download-link {
+            display: inline-block;
+            padding: 12px 30px;
+           border-radius: 5px;
+            color: #9fc6fb;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .download-link:hover {
+            background: #738eb5;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .download-link:active {
+            transform: translateY(0);
+        }
+
+        .modal-detail-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .modal-detail-content p{font-size: 22px; text-align: center;}
+
+        .detail-image-row {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .detail-image-row.single {
+            justify-content: center;
+        }
+
+        .detail-image-item {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .detail-image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 반응형 - 모달 */
+        @media (max-width: 1024px) {
+            .modal-detail-section {
+                padding: 40px 30px;
+            }
+
+            .detail-image-row {
+                flex-direction: column;
+            }
+        }
+
+        /* 반응형 - 태블릿 */
+        @media (max-width: 1440px) {
+            body {
+                min-width: auto;
+            }
+
+            .container {
+                padding: 0 60px;
+            }
+
+            .project-title {
+                font-size: 28px;
+            }
+        }
+
+        /* 반응형 - 작은 화면 */
+        @media (max-width: 1024px) {
+            .project-card {
+               grid-template-columns: 1fr !important;
+                grid-template-areas: "image" "info" !important;
+            }
+
+            .project-card .project-info {
+                text-align: center;
+                padding: 0 10px !important;
+            }
+
+            .project-tags {
+                justify-content: center;
+            }
+
+            .project-title {
+                font-size: 26px;
+            }
+        }
+
+        /* 반응형 - 모바일 */
+  @media (max-width: 768px) {
+  /* 네비 박스를 페이지 중앙에 배치 */
+  .nav {
+    position: relative;
+    width: 100%;
+    max-width: 700px;         /* 빨간 박스 폭 제한 (원하면 값 조정) */
+    margin: 20px auto 0;      /* 중앙 정렬 */
+    background: #fff;
+   padding: 6px 10px;         /* 내부 패딩 줄이기 */
+    display: flex;
+    flex-wrap: wrap;          /* 줄 바꿈 허용 */
+    justify-content: center;  /* 항목들을 중앙으로 */
+    gap: 30px;
+    line-height: 10px;
+    overflow: visible;        /* 스크롤 대신 줄바꿈을 선택 */
+  }
+
+  /* 데스크톱에서 주었던 좌측 여백 제거 */
+  .nav {
+    margin-left: 0;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #89a7ff;
+    white-space: nowrap;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .nav-underline {
+    display: none;
+  }
+
+  /* 본문이 메뉴 아래로 자연스럽게 떨어지도록 */
+  main {
+    margin-top: 30px;
+  }
+}
+        
+        
+#visual .project-card:nth-child(odd) .project-image {
+    grid-area: image;
+}
+#visual .project-card:nth-child(odd) .project-info {
+    grid-area: info;
+    text-align: left;
+    padding-left: 40px;
+}
+
+#visual .project-card:nth-child(even) {
+    grid-template-areas: "info image";
+}
+#visual .project-card:nth-child(even) .project-image {
+    grid-area: image;
+}
+#visual .project-card:nth-child(even) .project-info {
+    grid-area: info;
+    text-align: left;
+    padding-right: 40px;
+}
+/* 시각정보디자인 첫 번째 카드 좌우 반전 */
+#visual .project-card.reverse {
+    grid-template-areas: "image info"; /* 이미지 왼쪽, 텍스트 오른쪽 */
+}
+
+#visual .project-card.reverse .project-image {
+    grid-area: image;
+}
+
+#visual .project-card.reverse .project-info {
+    grid-area: info;
+    text-align: left;
+    padding-left: 40px;
+}
+
+#illustration .project-card:nth-child(odd) {
+    grid-template-areas: "image info"; /* 이미지 왼쪽, 텍스트 오른쪽 */
+}
+#illustration .project-card:nth-child(odd) .project-image {
+    grid-area: image;
+}
+#illustration .project-card:nth-child(odd) .project-info {
+    grid-area: info;
+    text-align: left;
+    padding-left: 40px;
+}
+
+#illustration .project-card:nth-child(even) {
+    grid-template-areas: "info image"; /* 텍스트 왼쪽, 이미지 오른쪽 */
+}
+#illustration .project-card:nth-child(even) .project-image {
+    grid-area: image;
+}
+#illustration .project-card:nth-child(even) .project-info {
+    grid-area: info;
+    text-align: left;
+    padding-right: 40px;
+}
+/* 햄버거 메뉴 패널 */
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: -320px; /* 기본은 화면 밖 */
+  width: 320px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 12px rgba(0,0,0,0.15);
+  transition: right 0.3s ease;
+  z-index: 1001; /* 헤더(100)보다 큼 */
+  padding: 100px 30px 30px;
+}
+
+/* 열림 상태 */
+.hamburger-menu.active {
+  right: 0;
+}
+
+/* 오버레이 */
+.hamburger-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.hamburger-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 리스트 스타일 */
+.hamburger-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger-menu-list li { margin-bottom: 24px; }
+
+.hamburger-menu-list a {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+/* 빨간 밑줄 효과 */
+.hamburger-menu-list a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 2px;
+  background: #e43131;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.hamburger-menu-list a:hover::after {
+  transform: scaleX(1);
+}
+
+/* 햄버거 아이콘 active 애니메이션(선택) */
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+.hamburger span { transition: transform 0.3s ease, opacity 0.3s ease; }
+
+/* 모달 이미지 기본 반응형 */
+.modal-cover-image img,
+.detail-image-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 모바일 전용 크기 조정 */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px; /* 내부 여백 줄이기 */
+  }
+
+  .modal-cover-image {
+    width: 100%;   /* 화면 폭에 맞추기 */
+    margin: 20px auto;
+  }
+
+  .modal-cover-image img {
+    width: 100%;   /* 모바일에서는 꽉 차게 */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .detail-image-row {
+    flex-direction: column; /* 세로 배치 */
+    gap: 20px;
+  }
+
+  .detail-image-item {
+    width: 100%;   /* 모바일에서는 전체 폭 사용 */
+  }
+
+  .detail-image-item img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* 서브페이지 끝 */
